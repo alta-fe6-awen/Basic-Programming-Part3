@@ -1,5 +1,15 @@
-function compare(a, b) {
-  // Your Code Here
+function compare(a, b) {	
+	let lower;
+	let higher;
+
+	if (a<b) {
+		lower=a;
+		higher=b;
+	}else{
+		lower=b;
+		higher=a;
+	}
+	return lower;
 }
 
 console.log(compare("AKA", "AKASHI")); // AKA
