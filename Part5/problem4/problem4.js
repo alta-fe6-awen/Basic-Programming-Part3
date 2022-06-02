@@ -1,5 +1,17 @@
 function findMaxSumSubArray(k, arr) {
-  // Your Code Here
+
+	let result = 0;
+	for (var i = 0; i < k; i++) {
+		result += arr[i];
+	}
+
+	let curr_sum = result;
+	for (var i = k; i < arr.length; i++) {
+		curr_sum += arr[i] - arr[i-k];
+		result = Math.max(result,curr_sum);
+	}
+	return result;
+  
 }
 
 console.log(findMaxSumSubArray(3, [2, 1, 5, 1, 3, 2])); // 9
